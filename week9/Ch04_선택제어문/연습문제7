@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+    int a;
+    scanf("%d",&a);
+    printf("1. ADD\n");
+    printf("2. EDIT\n");
+    printf("3. DEL\n");
+    if (a==1){
+        printf("You selected ADD.");
+    }
+    else if (a==2) {
+        printf("You selected EDIT.");
+    }
+    else if (a==3) {
+        printf("You selected DEL.");
+    }
+    else {
+        printf("Wrong choice.");
+    }
+    return 0;
+}

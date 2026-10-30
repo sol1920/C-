@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int h;
+    int k;
+    scanf("%d",&h);
+    scanf("%d",&k);
+    printf("%d",k +100-h);
+    if ((k+100-h)>0) {
+        printf("Obesity\n");
+        printf("Need control");
+
+    }
+    return 0;
+}

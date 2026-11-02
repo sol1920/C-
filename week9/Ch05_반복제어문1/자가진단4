@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int n, small = 0, large = 0;
+
+    while (1) {
+        scanf("%d", &n);
+        if (n < 50) small++;
+        else large++;
+
+        if (n >= 100) break;   // 100 이상인 수도 센 다음 종료
+    }
+    printf("small : %d\n", small);
+    printf("large : %d\n", large);
+    return 0;
+}

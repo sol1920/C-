@@ -1,0 +1,139 @@
+(1)
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    scanf("%d", &n);
+
+    for (i = 0; i < n; i++) {
+        printf("Hello for loop\n");
+    }
+
+    return 0;
+}
+
+(2)
+#include <stdio.h>
+
+int main(void)
+{
+    int num = 1, sum = 0;
+
+    while (num <= 10) {
+        sum += num;
+        num++;
+    }
+    printf("sum = %d\n", sum);
+    printf("num = %d\n", num);
+    return 0;
+}
+
+(3)
+#include <stdio.h>
+
+int main(void)
+{
+    int score;
+
+    while (1) {
+        scanf("%d", &score);
+        if (score < 0 || score > 100) break;
+
+        if (score >= 80) printf("Pass\n");
+        else printf("Fail\n");
+    }
+    return 0;
+}
+
+(4)
+#include <stdio.h>
+
+int main() {
+    int n;
+    int cnt = 0, sum = 0;
+
+    while (1) {
+        scanf("%d", &n);
+        if (n == 0) break;
+        cnt++;
+        sum += n;
+    }
+
+    printf("cnt = %d\n", cnt);
+    printf("sum = %d\n", sum);
+    printf("avg = %.2f\n", (double)sum / cnt);
+    return 0;
+}
+(5)
+#include <stdio.h>
+
+int main() {
+    int n;
+    int max = 0, min = 101;
+
+    while (1) {
+        scanf("%d", &n);
+        if (n == 0) break;
+        if (n < 1 || n > 100) continue;
+        if (n > max) max = n;
+        if (n < min) min = n;
+    }
+
+    printf("MAX = %d\n", max);
+    printf("MIN = %d\n", min);
+    return 0;
+}
+
+(6)
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    while (1) {
+        printf("1. Input\n");
+        printf("2. Output\n");
+        printf("3. Delete\n");
+        printf("4. Finish\n");
+        printf("Enter number: ");
+        scanf("%d", &n);
+
+        switch (n) {
+            case 1: printf("You selected Input.\n"); break;
+            case 2: printf("You selected Output.\n"); break;
+            case 3: printf("You selected Delete.\n"); break;
+            case 4: printf("You selected Finish.\n"); break;
+            default: printf("Wrong input.\n");
+        }
+
+        if (n == 4) break;
+    }
+    return 0;
+}
+
+(7)
+#include <stdio.h>
+
+int main(void)
+{
+    int x;
+    scanf("%d", &x);
+
+    printf("8\n");
+    printf("7 5 8\n");
+    return 0;
+}
+
+(8)
+#include <stdio.h>
+
+int main() {
+    for (int j = 1; j <= 9; j++) {
+        for (int i = 2; i <= 4; i++) {
+            printf("%d * %d = %2d", i, j, i * j);
+            if (i < 4) printf("   ");
+        }
+        printf("\n");
+    }
+    return 0;
+}

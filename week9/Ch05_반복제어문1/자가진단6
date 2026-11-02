@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+
+    while (1) {
+        printf("1. Korea\n2. USA\n3. Japan\n4. China\n");
+        printf("number? ");
+        scanf("%d", &n);
+        printf("\n");
+
+        if (n == 1) printf("Seoul\n");
+        else if (n == 2) printf("Washington\n");
+        else if (n == 3) printf("Tokyo\n");
+        else if (n == 4) printf("Beijing\n");
+        else {
+            printf("none\n");
+            break;
+        }
+        printf("\n");
+    }
+    return 0;
+}

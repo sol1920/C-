@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int n, cnt = 0, sum = 0;
+
+    while (1) {
+        scanf("%d", &n);
+        if (n < 0 || n > 100) break;
+        cnt++;
+        sum += n;
+    }
+    printf("sum : %d\n", sum);
+    printf("avg : %.1f\n", (double)sum / cnt);
+    return 0;
+}

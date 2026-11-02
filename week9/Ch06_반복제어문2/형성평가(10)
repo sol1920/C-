@@ -1,0 +1,152 @@
+(1)
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        printf("JUNGOL\n");
+    }
+    return 0;
+}
+
+(2)
+#include <stdio.h>
+
+int main() {
+    int a, b, temp;
+    scanf("%d %d", &a, &b);
+    if (a > b) {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    for (int i = a; i <= b; i++) {
+        printf("%d ", i);
+    }
+    return 0;
+}
+
+(3)
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        if (i % 5 == 0) sum += i;
+    }
+    printf("%d", sum);
+    return 0;
+}
+
+(4)
+#include <stdio.h>
+
+int main() {
+    int n, x, sum = 0;
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &x);
+        sum += x;
+    }
+    printf("%.2f", (double)sum / n);
+    return 0;
+}
+
+(5)
+#include <stdio.h>
+
+int main() {
+    int n, even = 0, odd = 0;
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &n);
+        if (n % 2 == 0) even++;
+        else odd++;
+    }
+    printf("even : %d\n", even);
+    printf("odd : %d\n", odd);
+    return 0;
+}
+
+(6)
+#include <stdio.h>
+
+int main() {
+    int a, b, temp, sum = 0, cnt = 0;
+    scanf("%d %d", &a, &b);
+    if (a > b) {
+        temp = a;
+        a = b;
+        b = temp;
+    }
+    for (int i = a; i <= b; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+            sum += i;
+            cnt++;
+        }
+    }
+    printf("sum : %d\n", sum);
+    printf("avg : %.1f\n", (double)sum / cnt);
+    return 0;
+}
+
+(7)
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d ", n * i);
+    }
+    return 0;
+}
+
+(8)
+#include <stdio.h>
+
+int main() {
+    int row, col;
+    scanf("%d %d", &row, &col);
+    for (int i = 1; i <= row; i++) {
+        for (int j = 1; j <= col; j++) {
+            printf("%d ", i * j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+(9)
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n; j++) {
+            printf("(%d, %d) ", i, j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+(10)
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    int step = (a <= b) ? 1 : -1;
+
+    for (int j = 1; j <= 9; j++) {
+        for (int i = a; i != b + step; i += step) {
+            printf("%d * %d = %2d", i, j, i * j);
+            if (i != b) printf("   ");
+        }
+        printf("\n");
+    }
+    return 0;
+}

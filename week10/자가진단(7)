@@ -1,0 +1,109 @@
+(자가진단1)
+#include <stdio.h>
+
+int main() {
+    char ch[10];
+    for (int i = 0; i < 10; i++) {
+        scanf(" %c", &ch[i]);
+    }
+    for (int i = 0; i < 10; i++) {
+        printf("%c", ch[i]);
+    }
+    return 0;
+}
+
+(자가진단2)
+#include <stdio.h>
+
+int main() {
+    int arr[10];
+    for (int i = 0; i < 10; i++) {
+        arr[i] = i + 1;
+    }
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+
+(자가진단3)
+#include <stdio.h>
+
+int main() {
+    int arr[100];
+    int cnt = 0;
+    while (cnt < 100) {
+        scanf("%d", &arr[cnt]);
+        if (arr[cnt] == 0) break;
+        cnt++;
+    }
+    for (int i = cnt - 1; i >= 0; i--) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+
+(자가진단4)
+#include <stdio.h>
+
+int main() {
+    double score[6] = {85.6, 79.5, 83.1, 80.0, 78.2, 75.0};
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%.1f\n", score[a - 1] + score[b - 1]);
+    return 0;
+}
+
+(자가진단5)
+#include <stdio.h>
+
+int main() {
+    int arr[10];
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int min = arr[0];
+    for (int i = 1; i < 10; i++) {
+        if (arr[i] < min) min = arr[i];
+    }
+    printf("%d", min);
+    return 0;
+}
+
+(자가진단6)
+#include <stdio.h>
+
+int main() {
+    int arr[100];
+    int cnt = 0;
+    while (cnt < 100) {
+        scanf("%d", &arr[cnt]);
+        if (arr[cnt] == 0) break;
+        cnt++;
+    }
+    int max = arr[0], min = arr[0];
+    for (int i = 1; i < cnt; i++) {
+        if (arr[i] > max) max = arr[i];
+        if (arr[i] < min) min = arr[i];
+    }
+    printf("%d", max - min);
+    return 0;
+}
+
+(자가진단7)
+#include <stdio.h>
+
+int main() {
+    int arr[10];
+    int evenSum = 0, oddSum = 0;
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < 10; i++) {
+        if (i % 2 == 1) evenSum += arr[i];
+        else oddSum += arr[i];
+    }
+    printf("sum : %d\n", evenSum);
+    printf("avg : %.1f\n", oddSum / 5.0);
+    return 0;
+}

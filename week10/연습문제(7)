@@ -1,0 +1,92 @@
+(연습문제2)
+#include <stdio.h>
+
+int main() {
+    char ch[26];
+    for (int i = 0; i < 26; i++) {
+        ch[i] = 'A' + i;
+    }
+    for (int i = 25; i >= 0; i--) {
+        printf("%c ", ch[i]);
+    }
+    return 0;
+}
+
+(연습문제3)
+#include <stdio.h>
+
+int main() {
+    int arr[100];
+    int cnt = 0;
+    while (cnt < 100) {
+        scanf("%d", &arr[cnt]);
+        if (arr[cnt] == 0) break;
+        cnt++;
+    }
+    for (int i = 1; i < cnt; i += 2) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+
+(연습문제4)
+#include <stdio.h>
+
+int main() {
+    int days[13] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int month;
+    while (1) {
+        scanf("%d", &month);
+        if (month < 1 || month > 12) break;
+        printf("%d\n", days[month]);
+    }
+    return 0;
+}
+
+(연습문제5)
+#include <stdio.h>
+
+int main() {
+    int n, arr[100];
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int max = arr[0];
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) max = arr[i];
+    }
+    printf("%d", max);
+    return 0;
+}
+
+(연습문제6)
+#include <stdio.h>
+
+int main() {
+    int arr[10];
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+    }
+    int max = arr[0], min = arr[0];
+    for (int i = 1; i < 10; i++) {
+        if (arr[i] > max) max = arr[i];
+        if (arr[i] < min) min = arr[i];
+    }
+    printf("%d %d", max, min);
+    return 0;
+}
+
+(연습문제7)
+#include <stdio.h>
+
+int main() {
+    int arr[10], sum = 0;
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+    printf("sum = %d\n", sum);
+    printf("avg = %.1f\n", sum / 10.0);
+    return 0;
+}

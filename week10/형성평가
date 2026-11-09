@@ -1,0 +1,115 @@
+(형성평가1)
+#include <stdio.h>
+
+int main() {
+    char ch[10];
+    for (int i = 0; i < 10; i++) {
+        scanf(" %c", &ch[i]);
+    }
+    for (int i = 9; i >= 0; i--) {
+        printf("%c ", ch[i]);
+    }
+    return 0;
+}
+
+(형성평가2)
+#include <stdio.h>
+
+int main() {
+    int arr[5];
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("%d", arr[0] + arr[2] + arr[4]);
+    return 0;
+}
+
+(형성평가3)
+#include <stdio.h>
+
+int main() {
+    int arr[10];
+    int oddSum = 0, evenSum = 0;
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &arr[i]);
+        if (i % 2 == 0) oddSum += arr[i];
+        else evenSum += arr[i];
+    }
+    printf("odd : %d\n", oddSum);
+    printf("even : %d\n", evenSum);
+    return 0;
+}
+
+(형성평가4)
+#include <stdio.h>
+
+int main() {
+    double w[6], sum = 0;
+    for (int i = 0; i < 6; i++) {
+        scanf("%lf", &w[i]);
+        sum += w[i];
+    }
+    printf("%.1f\n", sum / 6);
+    return 0;
+}
+
+(형성평가5)
+#include <stdio.h>
+
+int main() {
+    int arr[100];
+    int cnt = 0;
+    while (cnt < 100) {
+        scanf("%d", &arr[cnt]);
+        if (arr[cnt] == 0) break;
+        cnt++;
+    }
+    int max = arr[0], min = arr[0];
+    for (int i = 1; i < cnt; i++) {
+        if (arr[i] > max) max = arr[i];
+        if (arr[i] < min) min = arr[i];
+    }
+    printf("%d", max + min);
+    return 0;
+}
+(형성평가6)
+#include <stdio.h>
+
+int main() {
+    int arr[100];
+    int n = 0, cnt = 0, sum = 0;
+    while (n < 100) {
+        scanf("%d", &arr[n]);
+        if (arr[n] == 0) break;
+        n++;
+    }
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 5 == 0) {
+            cnt++;
+            sum += arr[i];
+        }
+    }
+    printf("Multiples of 5 : %d\n", cnt);
+    printf("sum : %d\n", sum);
+    printf("avg : %.1f\n", (double)sum / cnt);
+    return 0;
+}
+
+(형성평가7)
+#include <stdio.h>
+
+int main() {
+    int arr[100];
+    int n = 0;
+    while (n < 100) {
+        scanf("%d", &arr[n]);
+        if (arr[n] == 0) break;
+        n++;
+    }
+    printf("%d\n", n);
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) printf("%d ", arr[i] / 2);
+        else printf("%d ", arr[i] * 2);
+    }
+    return 0;
+}

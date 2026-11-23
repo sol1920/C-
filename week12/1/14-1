@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+	FILE*filePtr;
+	char filename[]="example.txt";
+
+	filePtr = fopen(filename, "W");
+
+	if (filePtr == NULL) {
+		printf("파일을 열 수 없습니다: %s \n", filename);
+		return 1;
+	}
+
+	fprintf(filePtr, "hello, world!\n");
+
+	fclose(filePtr); //파일 닫기
+	
+	printf("%s 파일에 데이터를 성공적으로 썼습니다. \n", filename);
+
+	return 0;
+}
